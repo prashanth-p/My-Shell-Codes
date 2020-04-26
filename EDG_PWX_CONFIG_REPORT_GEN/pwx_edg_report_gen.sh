@@ -28,6 +28,8 @@ resultFile="$resultFilePath/$resultFileName"
 parseDetailLog() {
     SERVER=$1
     outputFileName=$2
+    ERPNAME=$3
+    ENVNAME=$4
     cat $parseDetailLogScript | ssh ${userName}@${SERVER} > ${outputFileName}
     # RESULT="${DBNAME},${DBVERSION},${PWXVERSION},${OSVERSION},${TIMESTAMP},${COLDSTART},${CONDENSEFILERETENTION},${CCLPARM_AGEOUT},${CCLPARM_ROWID}"
     local DBNAMEFROMSCRIPT=$( cat ${outputFileName} | awk -F, '{ print $1 }') 
@@ -60,7 +62,7 @@ do
     echo "Processing ${ERPNAME} ${ENVNAME} ${DBNAME}"
     outputFileName="$(pwd)/output/output_${SERVER}_${ERPNAME}.txt"
     echo $outputFileName
-    parseDetailLog $SERVER $outputFileName
+    parseDetailLog $SERVER $outputFileName $ERPNAME $ENVNAME
     echo $RESULT >> ${resultFile}
     echo "DBNAME :  ${DBNAMEFROMSCRIPT}"
 done < $configFile
