@@ -13,7 +13,7 @@
 #                                   Global Varibles used throught the script                               #
 #----------------------------------------------------------------------------------------------------------#
 configFile="$(pwd)/config/sampleconfig.cfg"
-userName='edgusr'
+userName='<userID>'
 parseDetailLogScript="$(pwd)/scripts/parseDetailLog.sh"
 resultFilePath="$(pwd)/output"
 resultFileName="EDG_REPORT_$(date +%d%m%y_%H%M%S).csv"
