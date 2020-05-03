@@ -91,7 +91,7 @@ getStartingPointToParse () {
                 # returning gloabal variables
 
                 startingPointRangeResult="Latest Coldstart=y/n found between Start Range: ${max} to End Range: ${min}"
-                maxRange=$max
+                maxRange=$mid
                 minRange=$min
                 return 0
             fi 
