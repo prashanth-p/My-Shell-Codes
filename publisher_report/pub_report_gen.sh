@@ -23,12 +23,12 @@ export ALERT_FILE_NAME=${ALERT_EMAILS}/PWXPUB_REPORT_${HTML_TIMESTAMP}.html
 
 # Notification Mail List
 # To Email ID
-export EMAIL_NOTIFY1=DL-NCSUS-APPS-BI-T1-INFA@ITS.JNJ.COM
+export EMAIL_NOTIFY1=
 export EMAIL_NOTIFY2=
 
 # CC Email ID
-export EMAIL_NOTIFY3=SMani@ITS.JNJ.COM
-export EMAIL_NOTIFY4=sparama1@ITS.JNJ.com
+export EMAIL_NOTIFY3=
+export EMAIL_NOTIFY4=
 
 # Send Mail to Team
 
